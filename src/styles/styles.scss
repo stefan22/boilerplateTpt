@@ -1,0 +1,42 @@
+@import './base/settings';
+@import './base/base';
+
+/* dashboard page */
+
+h1,
+h2,
+h3 {
+	text-align: center;
+}
+
+.is-active {
+   font-weight: 400;
+   color: #e22b2b;
+}
+
+#portfolio {
+   width:80%;
+   margin: 0 auto;
+}
+
+.portfolio-item {
+   width:80%;
+   margin: 0 auto;
+}
+
+.portfolio {
+   width: 80%;
+   margin: 0 auto;
+}
+
+.portfolio-item h3 {
+   text-decoration:underline;
+   color:crimson;
+   margin-bottom: 2em;
+}
+
+.portfolio-box {
+   padding: 1em;
+   border: 1px solid gainsboro;
+   min-height: 350px;
+}
