@@ -6,9 +6,9 @@ react
 
 ## Redux library 101
 
-- `state management` library (or state container) that integrates with react and allows
-  us track `changing data`
-- similar to `component-based` state where `this.state` that changes and we do something when
+- ***state management*** library (or state container) that integrates with react and allows
+  us track ***changing data***
+- similar to ***component-based*** state where `this.state` that changes and we do something when
   it changes.
 - they ***both manage state*** (component-based state and redux)
 
