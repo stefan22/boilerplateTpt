@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const PortfolioItem = (props) => {
    return (
@@ -7,6 +8,7 @@ const PortfolioItem = (props) => {
          <div className="portfolio-box">
             <p>This is the page for the item with id:
             &nbsp; <strong>{props.match.params.id}</strong></p>
+            <button><Link to="/portfolio">Back</Link></button>
          </div>
       </div>
    );
