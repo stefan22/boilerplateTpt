@@ -16,11 +16,11 @@ react
 
 #### where to store state in a complex react app or create re-usable components
 - by using redux, i hear
-- props only pass from `Expenses` to `Expense`
-- props are still a perfectly valid way of passing data between parent and child
-- only time to avoid props is when passing data through a long chain of components just
+- props only pass from __Expenses__ to __Expense__
+- __props__ are still a __perfectly valid__ way of __passing data__ between parent and child
+- only time to avoid props is when ***passing data through a long chain*** of components just
   to get it to the last one in the chain.
-- if you have components along a long chain just passing the data down, then redux would
+- if you have components along a long chain of components just passing the data down, then redux would
   make more sense to use.
 
 
