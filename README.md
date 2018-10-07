@@ -4,7 +4,7 @@ react
 
 
 
-## Redux library 101
+## Redux library 101 &nbsp; :notebook:
 
 - ***state management*** library (or state container) that integrates with react and allows
   us track ***changing data***
@@ -14,7 +14,7 @@ react
 
 ![](public/images/simple-complex.png)
 
-#### where to store state in a complex react app or create re-usable components
+#### Where to store state in a complex react app or create re-usable components &nbsp; :notebook:
 - by using redux, i hear
 - props only pass from __Expenses__ to __Expense__
 - __props__ are still a __perfectly valid__ way of __passing data__ between parent and child
@@ -31,7 +31,7 @@ react
 
 
 
-#### redux store
+#### Redux store &nbsp; :notebook:
 
 - an object
 
@@ -49,7 +49,7 @@ react
 
 ```
 
-#### to use react
+#### To use react &nbsp; :notebook:
 
 - install redux
 - import { createStore }
@@ -73,10 +73,10 @@ react
 
 ```
 
-#### actions
+#### Actions &nbsp; :notebook:
 
-- lets u change the redux store
-- an object with type of action to send to store
+- lets u ***change*** the redux store
+- an ***object*** with ***type of action*** to ***send*** to ***store***
 - //walk, stop-walking, work, stop-working
 
 - ex
@@ -99,16 +99,16 @@ react
 
 ```
 
-#### action generators
+#### Action generators &nbsp; :notebook:
 
-- it takes care of generating multiple action objects, through a function
+- it takes care of ***generating multiple action objects***, through a function
   that returns a new action object
 
 
-#### subscribing
+#### Subscribing &nbsp; :notebook:
 
-- here refers to watching changes to store
-- without `subscribe` any getStore call runs only when is called but what we
+- here refers to ***watching changes to store***
+- without `subscribe` any getStore call ***runs only when is called*** but what we
   need is to have it run only when the store state changes.
 - by subscribing you can also dispatch an action pass along some data and not
   just action type
@@ -136,15 +136,15 @@ react
 
 ```
 
-#### unsubscribe
+#### Unsubscribe &nbsp; :notebook:
 
 - the return value from subscriber is a function that we can use to unsubscribe
 - it doesn't take any arguments, just need to call it. (like clearInterval())
 
 
-#### creating dynamic actions
+#### Creating dynamic actions &nbsp; :notebook:
 
-- to pass dynamic information inside store objects and manipulate/change state
+- to ***pass dynamic information*** inside store objects and manipulate/change state
 
 ```
    ex:
@@ -170,7 +170,7 @@ react
 
 #### ES6 Object/Array Destructuring
 
-##### Object Destructuring
+##### Object Destructuring  &nbsp; :notebook:
 
 ```
    ex:
@@ -204,7 +204,7 @@ react
 
 ```
 
-##### Array Destructuring
+##### Array Destructuring &nbsp; :notebook:
 
 ```
    ex:
@@ -225,7 +225,7 @@ react
 ```
 
 
-#### destructuring a function argument
+#### destructuring a function argument &nbsp; :notebook:
 
 ```
 const add = ({a,b,c},x) => { //x is a separate arg altogheter
@@ -238,10 +238,10 @@ console.log(add({a:1,b:2,c:3}));
 
 
 
-### Reducers
+### Reducers &nbsp; :notebook:
 
-- how the application state changes in response to an action.
-- reducers are pure functions - output only determined by the arg are pass in.
+- how the application ***state changes in response to an action***.
+- reducers are ***pure functions*** - output only determined by the arg are pass in.
 - compute new state based on old state and action
 - never directly change/re-assigned state/action values - mutate
 
@@ -282,7 +282,7 @@ console.log(add({a:1,b:2,c:3}));
 
 ```
 
-#### combining multiple reducers instead of having one single big reducer
+#### Combining multiple reducers instead of having one single big reducer &nbsp; :notebook:
 
 - if the state gets a little more complex, then managing the state with
   several reducers is recommended
