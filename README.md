@@ -2,11 +2,6 @@
 
 react
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 2167e83... Update README.md
 ## Redux library 101 &nbsp; :notebook:
 
 - ***state management*** library (or state container) that integrates with react and allows
