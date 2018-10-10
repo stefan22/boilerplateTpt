@@ -1,53 +1,114 @@
-console.log('reduXpnsfy');
+console.log('redux iso');
+
 import { createStore, combineReducers } from 'redux';
+import uuid from 'uuid';
 
-// Expenses reducer
-const expensesReducer = (state = [], action) => {
-  switch (action.type) {
-     default:
-      return state;
+//reducers defaults
+const expensesDefault = [];
+const employeeDefault = [];
+const filterDefault = {
+   text: '',
+   description: '',
+   note: '',
+   amount: 0,
+   createAt: 0,
+   id: uuid(),
+   sortBy: 'date',
+   startDate: undefined,
+   endDate: undefined
+};
 
-  }// switch
+// expensesReducer
+const expensesReducer = (state = expensesDefault, action) => {
+   switch (action.type) {
+      case 'ADD_EXPENSE':
+         return [
+            ...state,action.expense
+         ];
+      default:
+         return state;
+
+   }//switch
 
 };// expensesReducer
 
 
+// filterReducer
+const filterReducer = (state = filterDefault, action) => {
+   switch (action.type) {
+      case 'TEXT':
+         return state;
+      case 'SORT_BY':
+         return state;
+      case 'START_DATE':
+         return state;
+      case 'END_DATE':
+         return state;
+      default:
+         return state;
+
+   }// switch
+
+}; // filterReducer
 
 
-const store = createStore(
-   combineReducers({
-      expenses: expensesReducer
-   })
+// employeeReducer
+const employeeReducer = (state = employeeDefault, action) => {
+   switch (action.type) {
+      default:
+         return state;
 
-); // store
+   }// switch
 
-
-console.log(store.getState());
-
-
-
-// Filters reducer
+};// employeeReducer
 
 
+// store
+const store = createStore(combineReducers({
+   expenses: expensesReducer,
+   employee: employeeReducer,
+   filter: filterReducer
+}));
+
+// subscribe
+store.subscribe(() => {
+   console.log(store.getState());
+});
+
+// action gen
+const addExpense = ({ description = '', note = '', amount = 0, createdAt = 0 } = {}) => ({
+	type: 'ADD_EXPENSE',
+	expense: {
+		id: uuid(),
+		description,
+		note,
+		amount,
+		createdAt
+	},
+});// addExpense
+
+//add expense dispatch
+const julyExpense = store.dispatch(addExpense({
+   description: 'july rent',
+   amount: 12000,
+   note: 'paid in full'
+}));
+
+const juneExpense = store.dispatch(addExpense({
+   description: 'june rent',
+   amount: 12000,
+   note: 'paid in full'
+}));
+
+const janExpense = store.dispatch(addExpense({
+   description: 'january rent',
+   amount: 14000,
+   note: 'last month at old location'
+}));
+
+console.log(julyExpense);
+console.log(janExpense);
+console.log(juneExpense);
 
 
 
-// state store
-
-const demoState = {
-   expenses: [
-      {
-         id: 's1002bz',  //7-length
-         description: 'June rent',
-         note: 'final payment before moving out',
-         amount: 150000,  //no decimal rent in pence - added twozeros
-         createdAt: 0  //as timestamp
-      }
-   ],
-   filters: {
-      text: 'rent',
-      sortBy: 'amount', //date or amount
-      startDate: undefined //date range
-   }
-
-};
